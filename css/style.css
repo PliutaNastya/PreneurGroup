@@ -254,7 +254,10 @@ h6 {
   padding-block-end: 3.125rem
 }
 .page__principle {
-  padding-block: 2.5rem
+  -webkit-padding-before: 2.5rem;
+  padding-block-start: 2.5rem;
+  -webkit-padding-after: 1.25rem;
+  padding-block-end: 1.25rem
 }
 .page__marqueee {
   -webkit-padding-before: 2.5rem;
@@ -714,14 +717,13 @@ h6 {
 }
 .contact__body {
   display: flex;
-  align-items: center;
-  -webkit-column-gap: 3.75rem;
-  -moz-column-gap: 3.75rem;
-  column-gap: 3.75rem
+  align-items: center
 }
 .contact__map {
   flex: 0 0 47.222222%;
-  aspect-ratio: 510/316
+  aspect-ratio: 510/316;
+  width: 100%;
+  box-shadow: 0 .125rem 1.125rem 0 rgba(0,0,0,.3)
 }
 .contact__info {
   flex: 0 0 47.222222%;
@@ -819,6 +821,11 @@ h6 {
   }
   .item-portfolio__content {
     padding: 2.5rem
+  }
+  .contact__body {
+    -webkit-column-gap: 3.75rem;
+    -moz-column-gap: 3.75rem;
+    column-gap: 3.75rem
   }
 }
 @media (max-width:20em) {
@@ -967,6 +974,14 @@ h6 {
   .principle__content {
     width: 100%
   }
+  .contact__body {
+    -webkit-column-gap: 1.875rem;
+    -moz-column-gap: 1.875rem;
+    column-gap: 1.875rem;
+    flex-direction: column;
+    row-gap: 1.875rem;
+    align-items: flex-start
+  }
 }
 @media (max-width:47.99875em)and (any-hover:none) {
   .icon-menu {
@@ -1012,6 +1027,11 @@ h6 {
 @media (min-width:47.99875em)and (max-width:69.375em) {
   .item-portfolio__content {
     padding: clamp(1.25rem ,-1.5567803052rem + 5.8476112508vw ,2.5rem)
+  }
+  .contact__body {
+    -webkit-column-gap: clamp(1.875rem ,-2.3351704579rem + 8.7714168762vw ,3.75rem);
+    -moz-column-gap: clamp(1.875rem ,-2.3351704579rem + 8.7714168762vw ,3.75rem);
+    column-gap: clamp(1.875rem ,-2.3351704579rem + 8.7714168762vw ,3.75rem)
   }
 }
 @media (any-hover:hover) {
